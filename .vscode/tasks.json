@@ -1,0 +1,37 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ReConfigureDebug",
+      "type": "shell",
+      "command": [
+        "rm -rf /mnt/c/workspace/tutorials/win_code_wsl_test/build &&",
+        "mkdir /mnt/c/workspace/tutorials/win_code_wsl_test/build &&",
+        "cd /mnt/c/workspace/tutorials/win_code_wsl_test/build && cmake .. -DCMAKE_BUILD_TYPE=Debug"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "ReConfigureRelease",
+      "type": "shell",
+      "command": [
+        "rm -rf /mnt/c/workspace/tutorials/win_code_wsl_test/build &&",
+        "mkdir /mnt/c/workspace/tutorials/win_code_wsl_test/build &&",
+        "cd /mnt/c/workspace/tutorials/win_code_wsl_test/build && cmake .. -DCMAKE_BUILD_TYPE=Release"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command":
+        "cmake --build /mnt/c/workspace/tutorials/win_code_wsl_test/build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

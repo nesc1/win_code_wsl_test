@@ -1,0 +1,38 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MainTest",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/mnt/c/workspace/tutorials/win_code_wsl_test/build/main",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "/mnt/c/workspace/tutorials/win_code_wsl_test/build",
+      "environment": [],
+      "externalConsole": true,
+      "windows": {
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
+      },
+      "pipeTransport": {
+        "pipeCwd": "",
+        "pipeProgram": "c:\\windows\\sysnative\\bash.exe",
+        "pipeArgs": ["-c"],
+        "debuggerPath": "/usr/bin/gdb"
+      },
+      "sourceFileMap": {
+        "/mnt/c": "c:\\"
+      }
+    }
+  ]
+}
